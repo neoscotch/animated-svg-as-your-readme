@@ -1,20 +1,19 @@
 # GitHub specific notes on SVG `<foreignObject>`
 
+## original credit for the trick: https://github.com/Richienb/Richienb in this [pr](https://github.com/sindresorhus/sindresorhus/pull/9) 
+
 ### I took everything on this page from [mozilla](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject) and edited it for this specific use case
 
 
-The  [`<foreignObject>`](https://raw.githubusercontent.com/neoscotch/animated-svg-as-your-readme/c82536ac7e650bcd779755031d560ea59543888f/example.svg) element includes elements from a different XML namespace. In the context of a browser, it is most likely (X)HTML.
+The  [`<foreignObject>`](https://raw.githubusercontent.com/neoscotch/animated-svg-as-your-readme/c82536ac7e650bcd779755031d560ea59543888f/example.svg) element includes elements from a different XML namespace. 
 
-This example works properly when viewed directly but when you use it on your GH readme it shows as a picture, but doesnt function
+In the context of a browser, it is most likely (X)HTML.
 
-[Example]("https://raw.githubusercontent.com/neoscotch/animated-svg-as-your-readme/c82536ac7e650bcd779755031d560ea59543888f/example.svg")
+This example works properly when viewed directly
 
-this would go in your profile readme
+https://raw.githubusercontent.com/neoscotch/animated-svg-as-your-readme/c82536ac7e650bcd779755031d560ea59543888f/example.svg
 
-```html
-html,body,svg { height:100% } 
-```
-this would go in the svg. in this case, readme.svg
+but, when you use it on your GH readme it shows as a picture, but doesnt function
 
 ```xml
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -52,45 +51,45 @@ GH also makes the entire svg a link
 [Attributes](#attributes "Permalink to Attributes")
 ---------------------------------------------------
 
-`[height](/en-US/docs/Web/SVG/Attribute/height)`
+[height](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/height)
 
-The height of the foreignObject. _Value type_: [**<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+The height of the foreignObject. _Value type_: [length](https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#length) | [percentage](https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 
-`[width](/en-US/docs/Web/SVG/Attribute/width)`
+[width](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/width)
 
-The width of the foreignObject. _Value type_: [**<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+The width of the foreignObject. _Value type_: [length](https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#length)|[percentage](https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 
-`[x](/en-US/docs/Web/SVG/Attribute/x)`
+[x](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/x)
 
-The x coordinate of the foreignObject. _Value type_: [**<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
+The x coordinate of the foreignObject. _Value type_: [length](https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#length)|[percentage](https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
-`[y](/en-US/docs/Web/SVG/Attribute/y)`
+[y](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/y)
 
-The y coordinate of the foreignObject. _Value type_: [**<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
+The y coordinate of the foreignObject. _Value type_: [length](https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#length)|[percentage](https://developer.mozilla.org/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
-**Note:** Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
+>## Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
 
 ### [Global attributes](#global_attributes "Permalink to Global attributes")
 
-[Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+[Core Attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Core)
 
-Most notably: `[id](/en-US/docs/Web/SVG/Attribute/id)`, `[tabindex](/en-US/docs/Web/SVG/Attribute/tabindex)`
+Most notably: `[id](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/id)`, `[tabindex](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/tabindex)`
 
-[Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+[Styling Attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Styling)
 
-`[class](/en-US/docs/Web/SVG/Attribute/class)`, `[style](/en-US/docs/Web/SVG/Attribute/style)`
+`[class](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/class)`, `[style](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/style)`
 
-[Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+[Conditional Processing Attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
 
-Most notably: `[requiredExtensions](/en-US/docs/Web/SVG/Attribute/requiredExtensions "This is a link to an unwritten page")`, `[systemLanguage](/en-US/docs/Web/SVG/Attribute/systemLanguage)`
+Most notably: `[requiredExtensions](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/requiredExtensions "This is a link to an unwritten page")`, `[systemLanguage](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/systemLanguage)`
 
 Event Attributes
 
-[Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Graphical event attributes](/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes), [Document event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
+[Global event attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Graphical event attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes), [Document event attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Events#document_event_attributes), [Document element event attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
-[Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+[Presentation Attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)
 
-Most notably: `[clip-path](/en-US/docs/Web/SVG/Attribute/clip-path)`, `[clip-rule](/en-US/docs/Web/SVG/Attribute/clip-rule)`, `[color](/en-US/docs/Web/SVG/Attribute/color)`, `[color-interpolation](/en-US/docs/Web/SVG/Attribute/color-interpolation)`, `[color-rendering](/en-US/docs/Web/SVG/Attribute/color-rendering)`, `[cursor](/en-US/docs/Web/SVG/Attribute/cursor)`, `[display](/en-US/docs/Web/SVG/Attribute/display)`, `[fill](/en-US/docs/Web/SVG/Attribute/fill)`, `[fill-opacity](/en-US/docs/Web/SVG/Attribute/fill-opacity)`, `[fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule)`, `[filter](/en-US/docs/Web/SVG/Attribute/filter)`, `[mask](/en-US/docs/Web/SVG/Attribute/mask)`, `[opacity](/en-US/docs/Web/SVG/Attribute/opacity)`, `[pointer-events](/en-US/docs/Web/SVG/Attribute/pointer-events)`, `[shape-rendering](/en-US/docs/Web/SVG/Attribute/shape-rendering)`, `[stroke](/en-US/docs/Web/SVG/Attribute/stroke)`, `[stroke-dasharray](/en-US/docs/Web/SVG/Attribute/stroke-dasharray)`, `[stroke-dashoffset](/en-US/docs/Web/SVG/Attribute/stroke-dashoffset)`, `[stroke-linecap](/en-US/docs/Web/SVG/Attribute/stroke-linecap)`, `[stroke-linejoin](/en-US/docs/Web/SVG/Attribute/stroke-linejoin)`, `[stroke-miterlimit](/en-US/docs/Web/SVG/Attribute/stroke-miterlimit)`, `[stroke-opacity](/en-US/docs/Web/SVG/Attribute/stroke-opacity)`, `[stroke-width](/en-US/docs/Web/SVG/Attribute/stroke-width)`, `[transform](/en-US/docs/Web/SVG/Attribute/transform)`, `[vector-effect](/en-US/docs/Web/SVG/Attribute/vector-effect)`, `[visibility](/en-US/docs/Web/SVG/Attribute/visibility)`
+Most notably: `[clip-path](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/clip-path)`, `[clip-rule](/en-US/docs/Web/SVG/Attribute/clip-rule)`, `[color](/en-US/docs/Web/SVG/Attribute/color)`, `[color-interpolation](/en-US/docs/Web/SVG/Attribute/color-interpolation)`, `[color-rendering](/en-US/docs/Web/SVG/Attribute/color-rendering)`, `[cursor](/en-US/docs/Web/SVG/Attribute/cursor)`, `[display](/en-US/docs/Web/SVG/Attribute/display)`, `[fill](/en-US/docs/Web/SVG/Attribute/fill)`, `[fill-opacity](/en-US/docs/Web/SVG/Attribute/fill-opacity)`, `[fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule)`, `[filter](/en-US/docs/Web/SVG/Attribute/filter)`, `[mask](/en-US/docs/Web/SVG/Attribute/mask)`, `[opacity](/en-US/docs/Web/SVG/Attribute/opacity)`, `[pointer-events](/en-US/docs/Web/SVG/Attribute/pointer-events)`, `[shape-rendering](/en-US/docs/Web/SVG/Attribute/shape-rendering)`, `[stroke](/en-US/docs/Web/SVG/Attribute/stroke)`, `[stroke-dasharray](/en-US/docs/Web/SVG/Attribute/stroke-dasharray)`, `[stroke-dashoffset](/en-US/docs/Web/SVG/Attribute/stroke-dashoffset)`, `[stroke-linecap](/en-US/docs/Web/SVG/Attribute/stroke-linecap)`, `[stroke-linejoin](/en-US/docs/Web/SVG/Attribute/stroke-linejoin)`, `[stroke-miterlimit](/en-US/docs/Web/SVG/Attribute/stroke-miterlimit)`, `[stroke-opacity](/en-US/docs/Web/SVG/Attribute/stroke-opacity)`, `[stroke-width](/en-US/docs/Web/SVG/Attribute/stroke-width)`, `[transform](/en-US/docs/Web/SVG/Attribute/transform)`, `[vector-effect](/en-US/docs/Web/SVG/Attribute/vector-effect)`, `[visibility](/en-US/docs/Web/SVG/Attribute/visibility)`
 
 Aria Attributes
 
