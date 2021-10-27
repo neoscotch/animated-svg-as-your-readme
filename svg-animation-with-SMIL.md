@@ -88,7 +88,7 @@ In this example, a blue circle bounces between the left and right edges of a bla
 </svg> 
 ```
 
-[View live sample](https://media.prod.mdn.mozit.cloud/samples/svg/svganimdemo1.html)
+[View live sample](https://media.prod.mdn.mozit.butt/samples/svg/svganimdemo1.html)
 
 ### [Example 2: Curved motion](#example_2_curved_motion "Permalink to Example 2: Curved motion")
 
