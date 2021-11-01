@@ -2,89 +2,172 @@
 	<foreignObject width="100%" height="100%">
 		<div xmlns="http://www.w3.org/1999/xhtml">
 			<style>
-				@keyframes rotate {
-					0% {
-						transform: rotate(3deg);
-					}
-					100% {
-						transform: rotate(-3deg);
-					}
-				}
+				@import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
-				@keyframes gradientBackground {
-					0% {
-						background-position: 0% 50%;
-					}
-					50% {
-						background-position: 100% 50%;
-					}
-					100% {
-						background-position: 0% 50%;
-					}
-				}
+body {
+  margin: 0;
+}
 
-				@keyframes fadeIn {
-					0% {
-						opacity: 0;
-					}
-					66% {
-						opacity: 0;
-					}
-					100% {
-						opacity: 1;
-					}
-				}
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+p {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
+}
 
-				.container {
-					font-family:
-						system-ui,
-						-apple-system,
-						'Segoe UI',
-						Roboto,
-						Helvetica,
-						Arial,
-						sans-serif,
-						'Apple Color Emoji',
-						'Segoe UI Emoji';
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					margin: 0;
-					width: 100%;
-					height: 400px;
-					background: linear-gradient(-45deg, #fc5c7d, #6a82fb, #05dfd7);
-					background-size: 600% 400%;
-					animation: gradientBackground 10s ease infinite;
-					border-radius: 10px;
-					color: white;
-					text-align: center;
-				}
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  color: white;
+}
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
 
-				h1 {
-					font-size: 50px;
-					line-height: 1.3;
-					letter-spacing: 5px;
-					text-transform: uppercase;
-					text-shadow:
-						0 1px 0 #efefef,
-						0 2px 0 #efefef,
-						0 3px 0 #efefef,
-						0 4px 0 #efefef,
-						0 12px 5px rgba(0, 0, 0, 0.1);
-					animation: rotate ease-in-out 1s infinite alternate;
-				}
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-				p {
-					font-size: 20px;
-					text-shadow: 0 1px 0 #efefef;
-					animation: 5s ease 0s normal forwards 1 fadeIn;
-				}
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 30%;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
 			</style>
-			<div class="container">
-				<h1>Made with HTML &amp; CSS<br/>not an animated GIF</h1>
-				<p>Click to see the source</p>
-			</div>
+			<div class="header">
+
+  <div class="inner-header flex">
+    <h1 style="color:grey">N</h1>
+    <div class="loader loader--style6" title="5" style="padding-top: 9px;">
+      <svg transform="rotate(-90 0 0)" height="60px" id="Layer_1" style="enable-background: new 0 0 80 80;" version="1.1" viewbox="0 10 24 30" width="24px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+        <rect fill="#f29808" height="10" width="4" x="0" y="13">
+          <animate attributename="height" attributetype="XML" begin="0s" dur="0.6s" repeatcount="indefinite" values="5;21;5">
+            <animate attributename="y" attributetype="XML" begin="0s" dur="0.6s" repeatcount="indefinite" values="13; 5; 13">
+            </animate>
+          </animate>
+        </rect>
+        <rect fill="#f29808" height="10" width="4" x="10" y="13">
+          <animate attributename="height" attributetype="XML" begin="0.15s" dur="0.6s" repeatcount="indefinite" values="5;21;5">
+            <animate attributename="y" attributetype="XML" begin="0.15s" dur="0.6s" repeatcount="indefinite" values="13; 5; 13">
+            </animate>
+          </animate>
+        </rect>
+        <rect fill="#f29808" height="10" width="4" x="20" y="13">
+          <animate attributename="height" attributetype="XML" begin="0.3s" dur="0.6s" repeatcount="indefinite" values="5;21;5">
+            <animate attributename="y" attributetype="XML" begin="0.3s" dur="0.6s" repeatcount="indefinite" values="13; 5; 13">
+            </animate>
+          </animate>
+        </rect>
+      </svg>
+    </div>
+
+    <h1></h1>
+    <h1 style="color:grey">O</h1>
+    <h1>SCOTCH</h1>
+  </div>
+
+  <div>
+    <text href=""><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fneoscotch%2FOpenRE.svg?type=small" /></text>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="content flex">
+  <p></p>
+  <p><text href="https://opencollective.com/openre/donate" target="_blank"></p>
+  <img src="https://opencollective.com/openre/donate/button@2x.png?color=blue" width=200 />
+  </text>
+</div>
 		</div>
 	</foreignObject>
 </svg>
