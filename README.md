@@ -5,7 +5,9 @@
   <div>    
     <img src="https://raw.githubusercontent.com/neoscotch/animated-svg-as-your-readme/de71b5d9af4fa42bc840cd45fe6ced706fe46eb0/textinabox.svg" max-width="100%" />
   </div>
-  <p> ^ this one usually finishes loading before you scroll to it<p/>
+
+  the animation above usually finishes loading before you scroll to it. [here](https://github.com/neoscotch/animated-svg-as-your-readme/blob/main/textinabox.svg) it is animated fully
+  
   <div>  
     <img src="https://raw.githubusercontent.com/neoscotch/animated-svg-as-your-readme/5faa3fe5e502cd17e49bd1258a5c53347e22f65b/Haunted-Library-for-animation.svg" max-width="100%" />
   </div>
